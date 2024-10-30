@@ -1,0 +1,96 @@
+.progress-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 12px;
+}
+
+.progress-card {
+  /* border:solid 1px #0000001e; */
+  padding: 14px 18px;
+  border-radius: 6px;
+  position: relative;
+  background-color: #f8f9fa;
+}
+
+/* Step active */
+.progress--active {
+  background-color: #e9ecef;
+}
+
+.progress-active :is(h3,h4) {
+  color: var(--bs-info);
+}
+
+.progress-active .progress-icon {
+  background-color: var(--bs-info);
+}
+
+/* Step pendiente  */
+.progress-pending :is(h3,h4, p) {
+  color: #ced4d9;
+}
+
+/* Step completado  */
+.progress-completed  h3 {
+  color: var(--bs-success);
+}
+.progress-completed .progress-icon {
+  background-color: var(--bs-success);
+}
+
+/* Step danger */
+.progress-danger :is(h3,h4) {
+  color: var( --bs-danger);
+}
+.progress-danger .progress-icon {
+  background-color: var( --bs-danger);
+}
+
+/* Warning */
+.progress-warning :is(h3,h4) {
+  color: var( --bs-warning);
+}
+.progress-warning .progress-icon {
+  background-color: var( --bs-warning);
+}
+.progress-icon {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: -16px;
+  right: 16px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bs-light);
+  font-size: 18px;
+  background-color: #ced4d9;
+}
+
+
+.list-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bs-light);
+  font-size: 18px;
+  background-color: #ced4d9;
+}
+
+.list-icon-danger {
+  font-size: 14px;
+  background-color: var(--bs-danger);
+}
+
+.list-icon-success {
+  background-color: var(--bs-success);
+}
+
+.list-icon-warning {
+  font-size: 14px;
+  background-color: var(--bs-warning);
+}

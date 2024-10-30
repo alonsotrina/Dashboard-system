@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --bs-primary: #3498db;
+  /* Color azul */
+  --bs-secondary: #2ecc71;
+  /* Color verde */
+  --bs-success: #1abc9c;
+  /* Color turquesa */
+  --bs-danger: #e74c3c;
+  /* Color rojo */
+  --bs-warning: #f1c40f;
+  /* Color amarillo */
+  --bs-info: #692d92;
+  /* Color púrpura */
+  --bs-light: #ffffff;
+  /* Color gris claro */
+  --bs-dark: #34495e;
+  /* Color gris oscuro */
+  --bs-dark-bg-subtle: #f8f9fa;
+  --bs-dark-ash: #acb5bd;
+  --bs-gray-dusk: #505964;
+  --fonts: "Titillium Web", sans-serif;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--fonts);
+  color: var(--text);
+  background-color: var(--white);
+}
+
+.text-info {
+  color: var(--bs-info) !important;
+}
+
+.text-primary-emphasis {
+  color: var(--bs-gray-dusk) !important;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+#root {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main-content";
+}
+
+header {
+  grid-area: header;
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  z-index: 2;
+}
+
+/* Col Left */
+aside {
+  grid-area: sidebar;
+  background: var(--bs-info);
+  /* background-color: var(--bs-light); */
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 56px;
+  width: 240px;
+  z-index: 2;
+  border-right: solid 1px #4a17621d;
+}
+
+/* Col rigth */
+main {
+  grid-area: main-content;
+  background: var(--bs-light);
+  margin-top: 56px;
+}
+
+.main-content {
+  background-color: #1abc9c;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Modal */
+.modal-header {
+  position: relative;
+}
+
+.modal-header button {
+  font-size: 12px;
+}
+
+.modal-header button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.modal-header .btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* Lista modal */
+.list-group-item .item-title {
+  width: 30%;
+  height: 100%;
+  padding: 8px 16px;
+}
+
+.list-group-item .item-description {
+  width: 70%;
+  height: 100%;
+  padding: 7px 16px;
+  border-left: 1px solid #dee2e6;
+}
+
+.list-group-item:hover{
+  background-color: rgba(106, 45, 146, 0.093);
+}
+
+/* LAYOUT PAGE DASHBOARD */
+.main-content-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12px;
+  row-gap: 12px;
+}
+
+/* TITULO PAGINAS */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container .dropdown-menu {
+  min-width: 300px;
+}
+
+.header-container .dropdown-toggle::after {
+  display: none;
+}
+
+/* INPUTS  */
+.filter-item .form-label {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: var(--bs-gray-dusk);
+}
+
+/* Reset Foccus  */
+.filter-item :is(.form-control, .form-select):focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Reset Foccus inputs */
+:is(.form-control, .form-select):focus {
+  border-color: var(--bs-dark-ash);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* VISTA DESKTOP */
+@media (min-width: 992px) {
+  #root {
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main-content";
+  }
+}
+
+/* VISTA DESKTOP XXL */
+@media (min-width: 1440px) {
+  .padding-xxl {
+    padding: 48px 120px !important;
+  }
+}

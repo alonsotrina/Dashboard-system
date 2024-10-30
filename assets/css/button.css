@@ -1,0 +1,40 @@
+.btn-info {
+    --bs-btn-font-weight: 400;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bs-info); 
+    --bs-btn-border-color: var(--bs-info);
+    --bs-btn-hover-color: var(--bs-white); 
+    --bs-btn-hover-bg: #541a6e; 
+    --bs-btn-hover-border-color: #541a6e;
+    --bs-btn-focus-shadow-rgb: var(--bs-info-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #4a1762;
+    --bs-btn-active-border-color: #4a1762;
+  }
+  
+  .btn-info:focus,
+  .btn-info:active,
+  .btn-info.focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .btn-outline-info {
+    --bs-btn-font-weight: 400;
+    --bs-btn-color: var(--bs-info);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--bs-info);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: var(--bs-info);
+    --bs-btn-hover-border-color: var(--bs-info);
+    --bs-btn-focus-shadow-rgb: var(--bs-info-rgb);
+    --bs-btn-active-color: var(--bs-white);
+    --bs-btn-active-bg: var(--bs-info);
+    --bs-btn-active-border-color: var(--bs-info);
+  }
+  
+  /* Quitar la sombra y contorno del foco */
+  .btn-bd-outline-primary:focus {
+    box-shadow: none;
+    outline: none; 
+  }

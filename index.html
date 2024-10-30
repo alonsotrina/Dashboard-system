@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment</title>
+  <!-- Reset Css -->
+  <link rel="stylesheet" href="assets/css/Reboot.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Icons -->
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Css -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/sidebar.css" />
+  <link rel="stylesheet" href="assets/css/pikaday.css" />
+  <link rel="stylesheet" href="assets/css/table.css" />
+  <link rel="stylesheet" href="assets/css/button.css" />
+  <link rel="stylesheet" href="assets/css/alert.css" />
+  <link rel="stylesheet" href="assets/css/card.css" />
+
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid d-lfex">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logos/logo_BS.png.webp" alt="logo del sitio">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="btn-group ms-auto ">
+              <button type="button" class="btn btn-info dropdown-toggle btn-sm" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <i class="bi bi-person"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><h6 class="dropdown-header pb-0">Bienvedido</h6></li>
+                <li><h6 class="dropdown-header pt-0 text-xs">alonsotrona22@gmail.com</h6></li>
+                <li><button class="dropdown-item" type="button">Mi perfil</button></li>
+                <li><button class="dropdown-item" type="button">Configuraciones</button></li>
+                <li><button class="dropdown-item" type="button">Cerrar sesión</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Columna izquierda -->
+    <aside class="sidebar">
+      <ul class="sidebar-nav">
+        <li class="sidebar-item ">
+          <a href="index.html" class="sidebar-link sidebar-active">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-agenda"></i>
+            <span>Reportes Diarios</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+            <i class="lni lni-protection"></i>
+            <span>Monitoreo</span>
+            <i class="lni lni-chevron-down icon-arrow ms-auto"></i>
+          </a>
+          <ul id="auth" class="sidebar-dropdown list-unstyled collapse ml-5" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="monitoreo-dashboard.html" class="sidebar-link">Dashboard</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="monitoreo-incidentes.html" class="sidebar-link">Incidentes</a>
+            </li>
+            <li class="sidebar-item">
+              
+              <a href="monitoreo-historico.html" class="sidebar-link">Histórico</a>
+            </li>
+          </ul>
+          
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-gear"></i>
+            <span>Configuración</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item mt-5">
+          <a href="step.html" class="sidebar-link">
+            <i class="lni lni-popup"></i>
+            <span>Step</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    
+    <!-- Columna derecha -->
+    <main class="p-5 px-4 padding-xxl">
+      <h2 class="fs-4 fw-semibold text-info mb-4">¡Hola: Alonso Trina!</h2>
+
+      <div class="alert alert-border-danger mb-4" role="alert">
+        <h3 class="fs-5 fw-bold text-danger mb-2">¡Atención!</h3>
+        <p>Problemas destacados al generar los informes. No se generará ningún informe hasta que se solucione el incidente detectado.</p>
+        <a href="#" class="alert-link text-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+      </div>
+
+      <div class="alert alert-border-warning" role="alert">
+        <h3 class="fs-5 fw-bold text-warning mb-2">¡Atención!</h3>
+        <p>No se ha actualizado el valor de la variable X. Favor de resolver esta situación antes del xx/xx/24.</p>
+        <a href="#" class="alert-link text-warning">Ver más</a>
+      </div>
+
+      <div class="alert alert-border-success" role="alert">
+        <h3 class="fs-5 fw-bold text-success mb-2">¡Atención!</h3>
+        <p>El sistema opera de forma normal. Se han generado todos los informes program</p>
+        <a href="#" class="alert-link text-success">Ver más</a>
+      </div>
+
+      <h2 class="fs-6 text-primary-emphasis text-capitalize mb-3">Etapas del procesos</h2>
+
+      <div class="progress-steps">
+        <div class="progress-card border progress-active">
+          <div class="progress-icon">
+            <i class="bi bi-arrow-right-short"></i>
+          </div>
+      
+          <h3 class="fs-6">Paso 1</h3>
+          <h4 class="fs-5 mb-2">Obtención de data</h4>
+          <p class="text-xs">Problemas destacados al generar los informes.</p>
+        </div>
+      
+        <div class="progress-card border progress-pending">
+          <div class="progress-icon">
+            <i class="bi bi-arrow-right-short"></i>
+          </div>
+      
+          <h3 class="fs-6">Paso 2</h3>
+          <h4 class="fs-5 mb-2">Consistencia</h4>
+          <p class="text-xs">Problemas destacados al generar los informes.</p>
+        </div>
+      
+        <div class="progress-card border progress-pending">
+          <div class="progress-icon">
+            <i class="bi bi-arrow-right-short"></i>
+          </div>
+      
+          <h3 class="fs-6">Paso 3</h3>
+          <h4 class="fs-5 mb-2">Confección</h4>
+          <p class="text-xs">Problemas destacados al generar los informes.</p>
+        </div>
+      
+        <div class="progress-card border progress-pending">
+          <div class="progress-icon">
+            <i class="bi bi-arrow-right-short"></i>
+          </div>
+      
+          <h3 class="fs-6">Paso 4</h3>
+          <h4 class="fs-5 mb-2">Entrega</h4>
+          <p class="text-xs">Problemas destacados al generar los informes.</p>
+        </div>  
+      </div>
+    </main>
+  </div>
+
+
+
+  <!-- Modal Alert -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0 pt-5">
+          <div class="modal-title">
+            <h1 class="fs-5 fw-semibold" id="exampleModalLabel">Detalle Incidente <span class="text-info">IC07</span></h1>
+            <p class="text-sm">10/10/2023 17:09:34</p>
+          </div>
+         
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pb-5">
+          <ul class="list-group">
+            <li class="list-group-item p-0 d-flex">
+                <h4 class="text-sm fw-semibold item-title text-info">Tipo</h4>
+                <p class="text-sm item-description">Insconcistencia de información</p>
+            </li>
+
+            <li class="list-group-item p-0 d-flex">
+              <h4 class="text-sm fw-semibold item-title text-info">ID Proceso</h4>
+              <p class="text-sm item-description">P-M-205</p>
+            </li>
+
+            <li class="list-group-item p-0 d-flex">
+              <h4 class="text-sm fw-semibold item-title text-info">Causa</h4>
+              <p class="text-sm item-description">Externa</p>
+            </li>
+
+            <li class="list-group-item p-0 d-flex">
+              <h4 class="text-sm fw-semibold item-title text-info">Microservicio</h4>
+              <p class="text-sm item-description">M06 - NODE 7</p>
+            </li>
+
+            <li class="list-group-item p-0 d-flex">
+              <h4 class="text-sm fw-semibold item-title text-info">Descripción</h4>
+              <p class="text-sm item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla non vitae a maiores accusamus nemo aliquid dicta, necessitatibus illo asperiores ipsum quaerat quis. Expedita a id vitae, labore laborum alias?</p>
+            </li>
+
+            <li class="list-group-item p-0 d-flex">
+              <h4 class="text-sm fw-semibold item-title text-info">Mensaje Error</h4>
+              <p class="text-sm item-description">A second item</p>
+            </li>
+
+            <li class="list-group-item p-0 d-flex">
+              <h4 class="text-sm fw-semibold item-title text-info">Return</h4>
+              <p class="text-sm item-description">A second item</p>
+            </li>
+          </ul>
+
+      </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <!-- JS bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"></script>
+    <!-- JS  -->
+    <script src="assets/js/input.js"></script>
+    <script src="assets/js/format-credit-card.js"></script>
+</body>
+
+</html>
