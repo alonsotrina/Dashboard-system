@@ -10,11 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
       return `${day}/${month}/${year}`;
     },
     parse(dateString, format) {
-        const parts = dateString.split('/');
-        const day = parseInt(parts[0], 10);
-        const month = parseInt(parts[1], 10) - 1;
-        const year = parseInt(parts[2], 10);
-        return new Date(year, month, day);
+      const parts = dateString.split('/');
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month, day);
     },
     onSelect: function (date) {
       console.log(date);
@@ -59,11 +59,11 @@ window.addEventListener('DOMContentLoaded', () => {
       return `${day}/${month}/${year}`;
     },
     parse(dateString, format) {
-        const parts = dateString.split('/');
-        const day = parseInt(parts[0], 10);
-        const month = parseInt(parts[1], 10) - 1;
-        const year = parseInt(parts[2], 10);
-        return new Date(year, month, day);
+      const parts = dateString.split('/');
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month, day);
     },
     onSelect: function (date) {
       console.log(date);
@@ -98,3 +98,27 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 })
+
+
+
+// Limpiar filtros
+// Form historico
+const filterForm = document.getElementById('filterForm');
+const clearFilterBtn = document.getElementById('clearFilter');
+const searchBtn = document.getElementById('search');
+
+
+filterForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  clearFilterBtn.classList.remove('display-none-button');
+  searchBtn.classList.add('display-none-button')
+});
+
+// Limpiar filtro
+clearFilterBtn.addEventListener('click', function () {
+  document.getElementById('tipo-error').selectedIndex = 0;
+  document.getElementById('datepicker').value = '';
+  document.getElementById('datepicker2').value = '';
+  clearFilterBtn.classList.add('display-none-button');
+  searchBtn.classList.remove('display-none-button')
+});

@@ -12,6 +12,28 @@
   background-color: #f8f9fa;
 }
 
+.progress-title {
+ display: flex;
+ /* justify-items: center; */
+ align-items: center;
+ gap: 0.5rem;
+}
+
+.progress-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ced4d9;
+}
+
+.progress-image img {
+  width: 70%;
+  filter: invert(1);
+}
+
 /* Step active */
 .progress--active {
   background-color: #e9ecef;
@@ -21,7 +43,7 @@
   color: var(--bs-info);
 }
 
-.progress-active .progress-icon {
+.progress-active :is(.progress-icon, .progress-image) {
   background-color: var(--bs-info);
 }
 
@@ -31,26 +53,28 @@
 }
 
 /* Step completado  */
-.progress-completed  h3 {
+.progress-completed :is(h3,.progress-image) {
   color: var(--bs-success);
 }
-.progress-completed .progress-icon {
+
+
+.progress-completed :is(.progress-icon,.progress-image){
   background-color: var(--bs-success);
 }
 
 /* Step danger */
-.progress-danger :is(h3,h4) {
+.progress-danger :is(h3,h4,.progress-image) {
   color: var( --bs-danger);
 }
-.progress-danger .progress-icon {
+.progress-danger :is(.progress-icon,.progress-image ){
   background-color: var( --bs-danger);
 }
 
 /* Warning */
-.progress-warning :is(h3,h4) {
+.progress-warning :is(h3,h4,.progress-image) {
   color: var( --bs-warning);
 }
-.progress-warning .progress-icon {
+.progress-warning :is(.progress-icon,.progress-image) {
   background-color: var( --bs-warning);
 }
 .progress-icon {

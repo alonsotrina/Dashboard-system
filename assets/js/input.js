@@ -24,3 +24,10 @@ for(let input of inputs) {
   });
 }
 
+
+// Limpiar filtros
+const valueTipoError = document.getElementById('tipo-error')
+const valueDate1 = document.getElementById('datepicker2')
+const valueDate2 = document.getElementById('datepicker2')
+
+

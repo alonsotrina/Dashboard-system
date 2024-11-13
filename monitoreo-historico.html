@@ -111,46 +111,40 @@
 
       <div class="header-container mb-4">
         <h3 class="fs-4 text-capitalize">búsqueda incidentes históricos</h3>
-
-        <div class="dropdown ml-auto">
-          <button type="button" class="btn btn-outline-info dropdown-toggle btn-sm" data-bs-toggle="dropdown"
-            aria-expanded="false" data-bs-auto-close="outside">
-            <i class="bi bi-filter"></i>
-            Filtros
-          </button>
-
-          <form class="dropdown-menu p-4">
-            <h3 class="fs-6 text-info fw-normal mb-2">Filtrar Incidentes</h3>
-            <p class="text-sm text-primary-emphasis mb-3">Selecciona los
-              parámetros para enfocar tu búsqueda</p>
-
-            <div class="filter-item mb-2">
-              <label class="form-label">Tipo Error</label>
-              <select class="form-select form-select-sm" id="inputGroupSelect04"
-                aria-label="Example select with button addon">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-
-            <div class="filter-item mb-2">
-              <label class="form-label">Desde</label>
-              <input id="datepicker" type="text" autocomplete="off" class="form-control form-control-sm"
-                placeholder="Selecciona una fecha" spellcheck="false">
-            </div>
-
-            <div class="filter-item">
-              <label class="form-label">Hasta</label>
-              <input id="datepicker2" type="text" autocomplete="off" class="form-control form-control-sm"
-                placeholder="Selecciona una fecha" spellcheck="false">
-            </div>
-
-            <button type="submit" class="btn btn-info btn-sm mt-4">Aplicarfiltros</button>
-          </form>
-        </div>
       </div>
+
+      <form class="filter-history mb-4" id="filterForm">
+        <div class="filter-item text-info d-flex align-items-center justify-content-center mr-5">
+          <!-- <i class="bi bi-filter"></i> -->
+          <h5 class="text-sm fw-bold">Filtros</h5>
+        </div>
+
+        <div class="filter-item pl-5 d-block">
+          <select class="form-select" id="tipo-error"
+            aria-label="Example select with button addon">
+            <option selected>Tipo Error</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="filter-item pl-5 d-block">
+          <input id="datepicker" type="text" autocomplete="off" class="form-control" placeholder="Fecha desde" spellcheck="false">
+        </div>
+
+        <div class="filter-item pl-5 d-block"> 
+          <input id="datepicker2" type="text" autocomplete="off" class="form-control" placeholder="Fecha hasta" spellcheck="false">
+        </div>
+
+        <button type="submit" class="btn btn-info btn-sm" id="search">
+          <i class="bi bi-search"></i>
+        </button>
+        
+        <button type="button" id="clearFilter" class="btn btn-outline-info btn-sm display-none-button">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </form>
 
       <div class="table-nueva">
         <div clasS="table-header">
