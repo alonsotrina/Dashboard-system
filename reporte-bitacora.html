@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment</title>
+  <title>Reportas bitácora</title>
   <!-- Reset Css -->
   <link rel="stylesheet" href="assets/css/Reboot.css">
   <!-- Bootstrap -->
@@ -73,7 +73,7 @@
               <a href="reporte-descarga.html" class="sidebar-link">Descarga</a>
             </li>
             <li class="sidebar-item">
-              <a href="monitoreo-incidentes.html" class="sidebar-link">Bitácora</a>
+              <a href="monitoreo-incidentes.html" class="sidebar-link sidebar-active">Bitácora</a>
             </li>
           </ul>
         </li>
@@ -90,7 +90,7 @@
               <a href="monitoreo-dashboard.html" class="sidebar-link">Dashboard</a>
             </li>
             <li class="sidebar-item">
-              <a href="monitoreo-incidentes.html" class="sidebar-link sidebar-active">Incidentes</a>
+              <a href="monitoreo-incidentes.html" class="sidebar-link">Incidentes</a>
             </li>
             <li class="sidebar-item">
               <a href="monitoreo-historico.html" class="sidebar-link">Histórico</a>
@@ -116,95 +116,148 @@
 
     <!-- Columna derecha -->
     <main class="p-5 px-4">
-      <h2 class="fs-6 mb-2 text-info fw-light">Monitereo / Incidentes vigentes</h2>
+      <h2 class="fs-6 mb-2 text-info fw-light text-capitaliz">Reportes diarios / Bitácora</h2>
 
       <div class="header-container mb-4">
-        <h3 class="fs-4 text-capitalize">búsqueda incidentes vigentes</h3>
+        <h3 class="fs-4 text-capitalize">Bitácorade acceso a reportes</h3>
       </div>
 
-      <form class="filters mb-4" id="filterFormIncidents">
+      <form class="filters mb-4" id="filterFormLogReport">
         <div class="text-info">
           <h5 class="text-sm fw-bold">Filtros</h5>
         </div>
 
         <div class="filter-item pl-5 d-block">
-          <select class="form-select" id="select-incidents"
+          <input id="date-log-report" type="text" autocomplete="off" class="form-control" placeholder="Fecha" spellcheck="false">
+        </div>
+
+        <div class="filter-item pl-5 d-block">
+          <select class="form-select" id="user-download-report"
             aria-label="Example select with button addon">
-            <option selected>Tipo Error</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected>Usuarios</option>
+            <option value="1">Inf. Grup. Emp.</option>
+            <option value="2">Inf. Relacionado</option>
+            <option value="3">Limit. Indiv</option>
+            <option value="3">Entre otros</option>
           </select>
         </div>
 
-        <button type="submit" class="btn btn-info btn-sm" id="searchIncidents">
+        <div class="filter-item pl-5 d-block">
+          <select class="form-select" id="download-report"
+            aria-label="Example select with button addon">
+            <option selected>Reporte</option>
+            <option value="1">Inf. Grup. Emp.</option>
+            <option value="2">Inf. Relacionado</option>
+            <option value="3">Limit. Indiv</option>
+            <option value="3">Entre otros</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-info btn-sm" id="searchLogReport">
           <i class="bi bi-search"></i>
         </button>
         
-        <button type="button" id="clearFilterIncidents" class="btn btn-outline-info btn-sm display-none-button">
+        <button type="button" id="clearFilterLogReport" class="btn btn-outline-info btn-sm display-none-button">
           <i class="bi bi-x-lg"></i>
         </button>
       </form>
 
       <div class="table-nueva">
         <div clasS="table-header">
-          <div class="table-row">
+          <div class="table-row table-row-bitacora">
             <div>ID</div>
             <div>Fecha</div>
-            <div>Tipo Error</div>
-            <div>Descripción</div>
+            <div>Reporte</div>
+            <div>Usuario</div>
           </div>
         </div>
+        
         <div clasS="table-body">
-          <div class="table-row border">
+          <div class="table-row table-row-bitacora border">
             <div>CI07</div>
             <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda possimus, cum iure nesciunt nisi aliquid...</div>
-            <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
-            </div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>Fernando.hertz</div>
           </div>
-          <div class="table-row border">
-            <div>CI06</div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
             <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda possimus, cum iure nesciunt nisi aliquid...</div>
-            <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
-            </div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>monica.torres</div>
           </div>
-          <div class="table-row border">
-            <div>CI05</div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
             <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
-            <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
-            </div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>guillerno.delvalle</div>
           </div>
-          <div class="table-row border">
-            <div>CI05</div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
             <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
-            <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
-            </div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>francisca.foos</div>
+          </div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
+            <div>22/12/2025 15:34:04</div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>francisca.foos</div>
+          </div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
+            <div>22/12/2025 15:34:04</div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>monica.torres</div>
+          </div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
+            <div>22/12/2025 15:34:04</div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>francisca.foos</div>
+          </div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
+            <div>22/12/2025 15:34:04</div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>francisca.foos</div>
+          </div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
+            <div>22/12/2025 15:34:04</div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>guillerno.delvalle</div>
+          </div>
+
+          <div class="table-row table-row-bitacora border">
+            <div>3308</div>
+            <div>22/12/2025 15:34:04</div>
+            <div>C. Web - Consolidado Rut - 89.908-890-7</div>
+            <div>monica.torres</div>
           </div>
         </div>
       </div>
 
-      <nav aria-label="pagination" class="d-flex justify-content-end mt-3">
-        <ul class="pagination pagination-sm">
+      <nav aria-label="pagination" class="d-flex justify-content-between align-items-center mt-3">
+
+        <!-- <button type="button" id="clearFilterLogReport" class="btn btn-outline-info btn-sm">
+          <i class="bi bi-x-lg"></i>
+        </button> -->
+
+        <button type="button" id="clearFilterLogReport" class="btn btn-outline-primary btn-sm">
+          <i class="bi bi-file-earmark-excel"></i>
+          Descargar tabla
+        </button>
+        <!-- <button type="button" class="btn btn-primary btn-sm">Primary</button> -->
+
+        <ul class="pagination pagination-sm m-0">
           <li class="page-item" aria-current="page">
             <span class="page-link">1</span>
           </li>
@@ -217,69 +270,6 @@
         </ul>
       </nav>
     </main>
-  </div>
-
-  <!-- Modal Alert -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0 pt-5">
-          <div class="modal-title">
-            <h1 class="fs-5 fw-semibold" id="exampleModalLabel">Detalle
-              Incidente <span class="text-info">IC07</span></h1>
-            <p class="text-sm">10/10/2023 17:09:34</p>
-          </div>
-
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body pb-5">
-          <ul class="list-group">
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">Tipo</h4>
-              <p class="text-sm item-description">Insconcistencia de
-                información</p>
-            </li>
-
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">ID
-                Proceso</h4>
-              <p class="text-sm item-description">P-M-205</p>
-            </li>
-
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">Causa</h4>
-              <p class="text-sm item-description">Externa</p>
-            </li>
-
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">Microservicio</h4>
-              <p class="text-sm item-description">M06 - NODE 7</p>
-            </li>
-
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">Descripción</h4>
-              <p class="text-sm item-description">Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Nulla non vitae a maiores
-                accusamus nemo aliquid dicta, necessitatibus illo asperiores
-                ipsum quaerat quis. Expedita a id vitae, labore laborum
-                alias?</p>
-            </li>
-
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">Mensaje
-                Error</h4>
-              <p class="text-sm item-description">A second item</p>
-            </li>
-
-            <li class="list-group-item p-0 d-flex">
-              <h4 class="text-sm fw-semibold item-title text-info">Return</h4>
-              <p class="text-sm item-description">A second item</p>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- JS bootstrap -->
@@ -297,6 +287,7 @@
     integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- JS  -->
+  <script src="assets/js/pikaday.js"></script>
   <script src="assets/js/filter-incidemtes.js"></script>
 
 </body>

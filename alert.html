@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment</title>
+  <title>Alert</title>
   <!-- Reset Css -->
   <link rel="stylesheet" href="assets/css/Reboot.css">
   <!-- Bootstrap -->
@@ -51,12 +51,12 @@
         </div>
       </nav>
     </header>
-
+    
     <!-- Columna izquierda -->
     <aside class="sidebar">
       <ul class="sidebar-nav">
-        <li class="sidebar-item ">
-          <a href="index.html" class="sidebar-link sidebar-active">
+        <li class="sidebar-item">
+          <a href="index.html" class="sidebar-link">
             <i class="bi bi-house"></i>
             <span>Home</span>
           </a>
@@ -70,7 +70,7 @@
           </a>
           <ul id="reports" class="sidebar-dropdown list-unstyled collapse ml-5" data-bs-parent="#sidebar">
             <li class="sidebar-item">
-              <a href="reporte-descarga.html" class="sidebar-link">Descarga</a>
+              <a href="reporte-descarga.html" class="sidebar-link sidebar-active">Descarga</a>
             </li>
             <li class="sidebar-item">
               <a href="reporte-bitacora.html" class="sidebar-link">Bitácora</a>
@@ -84,7 +84,7 @@
             <span>Monitoreo</span>
             <i class="lni lni-chevron-down icon-arrow ms-auto"></i>
           </a>
-          <ul id="auth" class="sidebar-dropdown list-unstyled collapse ml-5" data-bs-parent="#sidebar">
+          <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
             <li class="sidebar-item">
               <a href="monitoreo-dashboard.html" class="sidebar-link">Dashboard</a>
             </li>
@@ -92,15 +92,15 @@
               <a href="monitoreo-incidentes.html" class="sidebar-link">Incidentes</a>
             </li>
             <li class="sidebar-item">
-              
               <a href="monitoreo-historico.html" class="sidebar-link">Histórico</a>
             </li>
           </ul>
+          
         </li>
 
         <li class="sidebar-item">
           <a href="#" class="sidebar-link">
-            <i class="bi bi-gear"></i>
+            <i class="lni lni-popup"></i>
             <span>Configuración</span>
           </a>
         </li>
@@ -112,7 +112,7 @@
         </li>
 
         <li class="sidebar-item">
-          <a href="alert.html" class="sidebar-link">
+          <a href="alert.html" class="sidebar-link sidebar-active">
             <span>Alert</span>
           </a>
         </li>
@@ -120,8 +120,8 @@
     </aside>
     
     <!-- Columna derecha -->
-    <main class="p-5 px-4 padding-xxl">
-      <h2 class="fs-4 fw-semibold text-info mb-4">¡Hola: Alonso Trina!</h2>
+    <main class="p-5 px-4">
+      <h2 class="fs-4 mb-5">step</h2>
 
       <div class="alert alert-border-danger mb-4" role="alert">
         <h3 class="fs-5 fw-bold text-danger mb-2">¡Atención!</h3>
@@ -129,197 +129,19 @@
         <a href="#" class="alert-link text-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
       </div>
 
-      <h2 class="fs-6 text-primary-emphasis text-capitalize mt-5 mb-4">
-        Etapas del proceso - <span class="badge text-bg-info ml-5">22/12/2024</span>
-      </h2>
-
-      <div class="progress-steps mb-5">
-        <div class="progress-card border progress-active">
-          <div class="progress-icon">
-            <i class="bi bi-arrow-right-short"></i>
-          </div>
-
-          <div class="progress-title mb-2">
-            <div class="progress-image">
-              <img src="assets/img/icons/data-collection.png" alt="data collection">
-            </div>
-
-            <div class="progress-item">
-              <h3 class="fs-6">Paso 1</h3>
-              <h4 class="fs-5">Obtención de data</h4>
-            </div>
-          </div>
-
-          <p class="text-xs">Problemas destacados al generar los informes.</p>
-        </div>
-      
-        <div class="progress-card border progress-pending">
-          <div class="progress-icon">
-            <i class="bi bi-arrow-right-short"></i>
-          </div>
-
-          <div class="progress-title mb-2">
-            <div class="progress-image">
-              <img src="assets/img/icons/icons8-check-new-folder-64.png" alt="check-new-folder">
-            </div>
-
-            <div class="progress-item">
-              <h3 class="fs-6">Paso 2</h3>
-              <h4 class="fs-5">Consistencia</h4>
-            </div>
-          </div>
-
-          <p class="text-xs">Problemas destacados al generar los informes.</p>
-        </div>
-      
-        <div class="progress-card border progress-pending">
-          <div class="progress-icon">
-            <i class="bi bi-arrow-right-short"></i>
-          </div>
-
-          <div class="progress-title mb-2">
-            <div class="progress-image">
-              <img src="assets/img/icons/process.png" alt="process">
-            </div>
-
-            <div class="progress-item">
-              <h3 class="fs-6">Paso 3</h3>
-              <h4 class="fs-5">Confección</h4>
-            </div>
-          </div>
-
-          <p class="text-xs">Problemas destacados al generar los informes.</p>
-        </div>
-      
-        <div class="progress-card border progress-pending">
-          <div class="progress-icon">
-            <i class="bi bi-arrow-right-short"></i>
-          </div>
-
-          <div class="progress-title mb-2">
-            <div class="progress-image">
-              <img src="assets/img/icons/information.png" alt="information">
-            </div>
-
-            <div class="progress-item">
-              <h3 class="fs-6">Entrega</h3>
-              <h4 class="fs-5">Confección</h4>
-            </div>
-          </div>
-
-          <p class="text-xs">Problemas destacados al generar los informes.</p>
-        </div>  
+      <div class="alert alert-border-warning" role="alert">
+        <h3 class="fs-5 fw-bold text-warning mb-2">¡Atención!</h3>
+        <p>No se ha actualizado el valor de la variable X. Favor de resolver esta situación antes del xx/xx/24.</p>
+        <a href="#" class="alert-link text-warning">Ver más</a>
       </div>
 
-      <div class="border-top border-info my-5"></div>
-      
-      <div class="row">
-        <!-- <div class="col-5">hola</div> -->
-
-        <div class="col-12">
-          <!-- titulo -->
-          <div class="mb-4 g-1">
-            <h3 class="fs-4 text-capitalize mb-2">Accseso a Reportes</h3>
-            <h2 class="fs-6 text-info fw-light ml-5 d-block">04/10/2025 17:09 hrs</h2>
-          </div>
-
-
-
-          <div class="table-nueva">
-            <div clasS="table-header">
-              <div class="table-row table-row-bitacora">
-                <div>Reporte</div>
-                <div>Cant.</div>
-              </div>
-            </div>
-            
-            <div clasS="table-body">
-              <div class="table-row table-row-home  border">
-                <div>Consulta Web - inf. Consolidado RUT</div>
-                <div>2.456</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe relacionado</div>
-                <div>25</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe relacionado</div>
-                <div>25</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe límite individual</div>
-                <div>5</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe filiales</div>
-                <div>15</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe mayores deudores</div>
-                <div>15</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe grupos empresariales</div>
-                <div>15</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="table-row table-row-home  border">
-                <div>Informe consolido RUT</div>
-                <div>15</div>
-                <div class="table-icon">
-                  <a href="reporte-bitacora.html" class="alert-link text-primary-emphasis" type="button">
-                    <i class="bi bi-search"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="alert alert-border-success" role="alert">
+        <h3 class="fs-5 fw-bold text-success mb-2">¡Atención!</h3>
+        <p>El sistema opera de forma normal. Se han generado todos los informes program</p>
+        <a href="#" class="alert-link text-success">Ver más</a>
       </div>
     </main>
   </div>
-
 
 
   <!-- Modal Alert -->
@@ -374,13 +196,10 @@
           </ul>
 
       </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div> -->
       </div>
     </div>
   </div>
+
 
     <!-- JS bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -392,6 +211,7 @@
     <!-- JS  -->
     <script src="assets/js/input.js"></script>
     <script src="assets/js/format-credit-card.js"></script>
+
 </body>
 
 </html>

@@ -8,15 +8,26 @@
     border-radius: 6px;
 }
 
+
+.table-row-bitacora {
+    grid-template-columns: 1fr 3fr 4fr 3fr;
+}
+
+.table-row-home {
+    grid-template-columns: 4fr 1fr 6%;
+}
+
 .table-row:hover {
     background-color: #e9ecef;
 }
 
 .table-row:nth-child(even) {
-    background-color: var(--bs-light);
     background-color: rgba(106, 45, 146, 0.093);
 }
 
+.table-row:nth-child(even):hover {
+    background-color: #e9ecef;
+}
 
 .table-header .table-row {
     padding: 4px;

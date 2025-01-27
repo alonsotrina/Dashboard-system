@@ -49,6 +49,10 @@ body {
   color: var(--bs-info) !important;
 }
 
+.border-info {
+  border-color: var(--bs-info) !important;
+}
+
 .text-primary-emphasis {
   color: var(--bs-gray-dusk) !important;
 }
@@ -172,6 +176,17 @@ main {
 }
 
 /* INPUTS  */
+
+.filters {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 12px;
+}
+
+.filters  .filter-item {
+ width: 100%;
+}
 
 .filter-history {
   display: grid;

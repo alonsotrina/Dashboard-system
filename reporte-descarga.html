@@ -70,10 +70,10 @@
           </a>
           <ul id="reports" class="sidebar-dropdown list-unstyled collapse ml-5" data-bs-parent="#sidebar">
             <li class="sidebar-item">
-              <a href="reporte-descarga.html" class="sidebar-link">Descarga</a>
+              <a href="reporte-descarga.html" class="sidebar-link sidebar-active">Descarga</a>
             </li>
             <li class="sidebar-item">
-              <a href="monitoreo-incidentes.html" class="sidebar-link">Bitácora</a>
+              <a href="reporte-bitacora.html" class="sidebar-link">Bitácora</a>
             </li>
           </ul>
         </li>
@@ -93,7 +93,7 @@
               <a href="monitoreo-incidentes.html" class="sidebar-link">Incidentes</a>
             </li>
             <li class="sidebar-item">
-              <a href="monitoreo-historico.html" class="sidebar-link sidebar-active">Histórico</a>
+              <a href="monitoreo-historico.html" class="sidebar-link">Histórico</a>
             </li>
           </ul>
         </li>
@@ -116,40 +116,37 @@
 
     <!-- Columna derecha -->
     <main class="p-5 px-4">
-      <h2 class="fs-6 mb-2 text-info fw-light">Monitereo / Incidentes Históricos</h2>
+      <h2 class="fs-6 mb-2 text-info fw-light text-capitaliz">Reportes diarios / descargas</h2>
 
       <div class="header-container mb-4">
-        <h3 class="fs-4 text-capitalize">búsqueda incidentes históricos</h3>
+        <h3 class="fs-4 text-capitalize">búsqueda reportes diarios</h3>
       </div>
 
-      <form class="filters mb-4" id="filterFormHistory">
+      <form class="filters mb-4" id="filterFormDownloadReport">
         <div class="text-info">
           <h5 class="text-sm fw-bold">Filtros</h5>
         </div>
 
         <div class="filter-item pl-5 d-block">
-          <select class="form-select" id="tipo-error"
-            aria-label="Example select with button addon">
-            <option selected>Tipo Error</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          <input id="date-download-report" type="text" autocomplete="off" class="form-control" placeholder="Fecha" spellcheck="false">
         </div>
 
         <div class="filter-item pl-5 d-block">
-          <input id="datepickerHistoyFrom" type="text" autocomplete="off" class="form-control" placeholder="Fecha desde" spellcheck="false">
+          <select class="form-select" id="input-download-report"
+            aria-label="Example select with button addon">
+            <option selected>Reporte</option>
+            <option value="1">Inf. Grup. Emp.</option>
+            <option value="2">Inf. Relacionado</option>
+            <option value="3">Limit. Indiv</option>
+            <option value="3">Entre otros</option>
+          </select>
         </div>
 
-        <div class="filter-item pl-5 d-block"> 
-          <input id="datepickerHistoyTo" type="text" autocomplete="off" class="form-control" placeholder="Fecha hasta" spellcheck="false">
-        </div>
-
-        <button type="submit" class="btn btn-info btn-sm" id="searchHistory">
+        <button type="submit" class="btn btn-info btn-sm" id="searchDownloadReport">
           <i class="bi bi-search"></i>
         </button>
         
-        <button type="button" id="clearFilterHistory" class="btn btn-outline-info btn-sm display-none-button">
+        <button type="button" id="clearFilterDownloadReport" class="btn btn-outline-info btn-sm display-none-button">
           <i class="bi bi-x-lg"></i>
         </button>
       </form>
@@ -159,119 +156,119 @@
           <div class="table-row">
             <div>ID</div>
             <div>Fecha</div>
-            <div>Tipo Error</div>
-            <div>Descripción</div>
+            <div>Hora</div>
+            <div>Reporte</div>
           </div>
         </div>
         <div clasS="table-body">
           <div class="table-row border">
             <div>CI07</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda possimus, cum iure nesciunt nisi aliquid...</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe relacionado</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI06</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda possimus, cum iure nesciunt nisi aliquid...</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe consolidado Rut</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe límite individual</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe relacionado</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe filiales</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe mayores deudores</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe grupos empresariales</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe mayores deudores</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe filiales</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
           <div class="table-row border">
             <div>CI05</div>
-            <div>22/12/2025 15:34:04</div>
-            <div>Insconcistencia</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.</div>
+            <div>22/12/2025</div>
+            <div>15:34 am</div>
+            <div>Informe relacionado</div>
             <div class="table-icon">
-              <a href="#" class="alert-link text-primary-emphasis" type="button" data-bs-toggle="modal"
-                data-bs-target="#exampleModal"><i class="bi bi-eye"></i></a>
+              <a href="#" class="alert-link text-primary-emphasis" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+              </a>
             </div>
           </div>
         </div>
